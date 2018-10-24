@@ -354,7 +354,7 @@ class JsonDiffer(object):
     class Options(object):
         pass
 
-    def __init__(self, syntax='compact', load=False, dump=False, marshal=False, loader=default_loader, dumper=default_dumper):
+    def __init__(self, syntax='compact', load=False, dump=False, marshal=True, loader=default_loader, dumper=default_dumper):
         self.options = JsonDiffer.Options()
         self.options.syntax = builtin_syntaxes.get(syntax, syntax)
         self.options.load = load
